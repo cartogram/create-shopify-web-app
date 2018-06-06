@@ -1,0 +1,52 @@
+{
+  "name": "spawn",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Generator for Shopify Web",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": {
+    "create-shopify-web-app": "./bin/create-shopify-web"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Shopify/spawn.git"
+  },
+  "author": "Shopify",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Shopify/spawn/issues"
+  },
+  "homepage": "https://github.com/Shopify/spawn#readme",
+  "dependencies": {
+    "@types/chalk": "^2.2.0",
+    "@types/yargs": "^11.0.0",
+    "chalk": "^2.4.1",
+    "commander": "^2.15.1",
+    "eslint": "^4.19.1",
+    "eslint-plugin-shopify": "^22.0.0",
+    "prettier": "^1.13.4",
+    "typescript": "^2.9.1",
+    "yargs": "^11.0.0"
+  },
+  "eslintConfig": {
+    "extends": [
+      "plugin:shopify/typescript",
+      "plugin:shopify/typescript-prettier",
+      "plugin:shopify/jest"
+    ],
+    "rules": {
+      "no-undefined": "off",
+      "no-process-env": "off",
+      "require-await": "off",
+      "jest/consistent-test-it": [
+        "error",
+        {
+          "fn": "it"
+        }
+      ]
+    }
+  }
+}
